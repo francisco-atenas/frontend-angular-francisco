@@ -1,1 +1,22 @@
-<p>files-upload works!</p>
+<div class="files-upload">
+  <div class="file-upload__header">
+    <h3>Files Uploading</h3>
+  </div>
+  <div class="files-upload__content">
+    <div
+      class="dropzone"
+      appDropZone
+      (hovered)="toggleHover($event)"
+      [class.dropzone__hovered]="isHovering"
+    >
+      <div class="dropzone__label">Deja tus archivos aquí</div>
+      <div class="dropzone__file">
+        <label class="file">
+          <input type="file" class="file__input" />
+          <span class="file__label">Selecciona un archivo</span>
+        </label>
+      </div>
+    </div>
+  </div>
+  <div class="files-upload__footer"></div>
+</div>

@@ -1,8 +1,9 @@
-import { FilesUpdloadDirective } from './files-updload.directive';
+import { FilesUploadDirective } from './files-updload.directive';
 
-describe('FilesUpdloadDirective', () => {
+describe('FilesUploadDirective', () => {
   it('should create an instance', () => {
-    const directive = new FilesUpdloadDirective();
+    const mockDialog = jasmine.createSpyObj('MatDialog', ['open', 'close']);
+    const directive = new FilesUploadDirective(mockDialog);
     expect(directive).toBeTruthy();
   });
 });

@@ -11,8 +11,9 @@ import { getStorage, provideStorage } from '@angular/fire/storage';
 import { AppRoutingModule } from './app-routing.module';
 import { AppComponent } from './app.component';
 import { environment } from '@src/environments/environment';
-import { IndicatorsModule } from './shared';
+import { PopupsModule } from './shared/popups';
 import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
+import { IndicatorsModule } from './shared/indicators';
 
 @NgModule({
   declarations: [AppComponent],
@@ -29,6 +30,7 @@ import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
     AngularFirestoreModule,
     IndicatorsModule,
     BrowserAnimationsModule,
+    PopupsModule,
   ],
   providers: [],
   bootstrap: [AppComponent],
