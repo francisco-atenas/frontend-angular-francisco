@@ -35,9 +35,11 @@ export class UploadComponent implements OnInit, OnDestroy {
 
   constructor(private storage: AngularFireStorage) {}
 
-  ngOnInit(): void {}
+  ngOnInit(): void {
+    this.startUpload();
+  }
 
-  startUploading(): void {
+  startUpload(): void {
     const path = `${this.file.type.split('/')[0]}/${Date.now()}_${
       this.file.name
     }`;
