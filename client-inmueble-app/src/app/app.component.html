@@ -5,3 +5,6 @@
 <button appFilesUpload [multiple]="true" (changed)="onFilesChanged($event)">
   Subir imágenes al servidor
 </button>
+
+<button (click)="onSuccess()">Mensaje de éxito</button>
+<button (click)="onError()">Mensaje de error</button>
