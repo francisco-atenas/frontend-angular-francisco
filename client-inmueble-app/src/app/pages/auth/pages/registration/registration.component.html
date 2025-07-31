@@ -1,0 +1,101 @@
+<section fxLayoutAlign="center">
+  <mat-card>
+    <form
+      fxLayout="column"
+      fxLayoutAlign="center center"
+      fxLayoutGap="10px"
+      #f="ngForm"
+      (submit)="registrarUsuario(f)"
+    >
+      <mat-form-field>
+        <mat-label>Ingrese Nombre</mat-label>
+        <input
+          matInput
+          type="text"
+          placeholder="Nombre"
+          name="nombre"
+          required
+          ngModel
+        />
+        <mat-error>El nombre es requerido</mat-error>
+      </mat-form-field>
+
+      <mat-form-field>
+        <mat-label>Ingrese Apellidos</mat-label>
+        <input
+          matInput
+          type="text"
+          placeholder="Apellidos"
+          name="apellidos"
+          required
+          ngModel
+        />
+        <mat-error>El apellido es requerido</mat-error>
+      </mat-form-field>
+
+      <mat-form-field>
+        <mat-label>Ingrese UserName</mat-label>
+        <input
+          matInput
+          type="text"
+          placeholder="UserName"
+          name="userName"
+          required
+          ngModel
+        />
+        <mat-error>El UserName es requerido</mat-error>
+      </mat-form-field>
+
+      <mat-form-field>
+        <mat-label>Ingrese Teléfono</mat-label>
+        <input
+          matInput
+          type="text"
+          placeholder="Teléfono"
+          name="telefono"
+          required
+          ngModel
+        />
+        <mat-error>El teléfono es requerido</mat-error>
+      </mat-form-field>
+
+      <mat-form-field>
+        <mat-label>Ingrese Email</mat-label>
+        <input
+          matInput
+          type="email"
+          placeholder="E-Mail"
+          name="email"
+          required
+          ngModel
+        />
+        <mat-error>El email es requerido</mat-error>
+      </mat-form-field>
+      <mat-form-field>
+        <mat-label>Ingrese Password</mat-label>
+        <input
+          matInput
+          type="password"
+          placeholder="Password"
+          name="password"
+          required
+          ngModel
+        />
+        <mat-error>La contraseña es requerida</mat-error>
+      </mat-form-field>
+      <mat-form-field>
+        <mat-label>Confirme Password</mat-label>
+        <input
+          matInput
+          type="password"
+          placeholder="Password"
+          name="password"
+          required
+          ngModel
+        />
+        <mat-error>La contraseña es requerida</mat-error>
+      </mat-form-field>
+      <button mat-raised-button color="primary">Login</button>
+    </form>
+  </mat-card>
+</section>
