@@ -1,24 +1,39 @@
 <mat-nav-list>
-  <a mat-list-item (click)="closeMenu()" routerLink="/">
+  <a *ngIf="isAuthorized" mat-list-item (click)="closeMenu()" routerLink="/">
     <mat-icon>home</mat-icon><span class="navegacion-list-label">Home</span>
   </a>
-  <a mat-list-item (click)="closeMenu()" routerLink="/auth/login">
+  <a
+    *ngIf="!isAuthorized"
+    mat-list-item
+    (click)="closeMenu()"
+    routerLink="/auth/login"
+  >
     <mat-icon>login</mat-icon
     ><span class="navegacion-list-label">Inicio Sesion</span>
   </a>
-  <a mat-list-item (click)="closeMenu()" routerLink="/auth/registration">
+  <a
+    *ngIf="!isAuthorized"
+    mat-list-item
+    (click)="closeMenu()"
+    routerLink="/auth/registration"
+  >
     <mat-icon>how_to_register</mat-icon
     ><span class="navegacion-list-label">Registrar</span>
   </a>
-  <a mat-list-item (click)="closeMenu()">
+  <a *ngIf="isAuthorized" mat-list-item (click)="closeMenu()">
     <mat-icon>contact_support</mat-icon
     ><span class="navegacion-list-label">Contacto</span>
   </a>
-  <a mat-list-item (click)="closeMenu()">
+  <a *ngIf="isAuthorized" mat-list-item (click)="closeMenu()">
     <mat-icon>add</mat-icon
     ><span class="navegacion-list-label">Nuevo Producto</span>
   </a>
-  <a mat-list-item (click)="closeMenu()">
+  <a
+    *ngIf="isAuthorized"
+    mat-list-item
+    (click)="onSignOut()"
+    (click)="closeMenu()"
+  >
     <mat-icon>logout</mat-icon
     ><span class="navegacion-list-label">Salir Sesion</span>
   </a>

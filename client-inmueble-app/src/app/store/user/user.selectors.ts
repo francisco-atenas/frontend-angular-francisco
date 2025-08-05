@@ -12,5 +12,5 @@ export const getLoading = createSelector(
 
 export const getIsAuthorized = createSelector(
   getUserState,
-  (state) => !!state.entity
+  (state) => !!state.entity?.username
 );

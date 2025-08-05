@@ -38,7 +38,7 @@ export class UserEffects {
             map(
               (response: UserResponse) =>
                 new fromActions.SignupEmailSuccess(
-                  response.email,
+                  response.username,
                   response || null
                 )
             ),
@@ -69,7 +69,7 @@ export class UserEffects {
             map(
               (response: UserResponse) =>
                 new fromActions.SigninEmailSuccess(
-                  response.email,
+                  response.username,
                   response || null
                 )
             ),
@@ -100,7 +100,7 @@ export class UserEffects {
               map(
                 (response: UserResponse) =>
                   new fromActions.InitAuthorized(
-                    response.email,
+                    response.username,
                     response || null
                   )
               ),

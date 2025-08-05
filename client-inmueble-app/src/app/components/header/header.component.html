@@ -12,13 +12,19 @@
   <div fxFlex fxLayout fxLayoutAlign="flex-end" fxHide.xs>
     <ul fxLayout="row" fxLayoutGap="10px" class="navegacion-menu">
       <li>
-        <a routerLink="/auth/registration">Registrar</a>
+        <a>{{ user ? user.username : null }}</a>
       </li>
       <li>
-        <a routerLink="/auth/login">Login</a>
+        <a *ngIf="!isAuthorized" routerLink="/auth/registration">Registrar</a>
       </li>
       <li>
-        <a routerLink="/">Home</a>
+        <a *ngIf="!isAuthorized" routerLink="/auth/login">Login</a>
+      </li>
+      <li>
+        <a *ngIf="isAuthorized" routerLink="/">Home</a>
+      </li>
+      <li (click)="onSignOut()">
+        <a *ngIf="isAuthorized" routerLink="/">Salir</a>
       </li>
     </ul>
   </div>

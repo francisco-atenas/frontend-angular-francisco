@@ -1,6 +1,6 @@
 import { Action } from '@ngrx/store';
 import {
-  EmailPasswordCredentials,
+  UsernamePasswordCredentials,
   UserCreateRequest,
   UserResponse,
 } from './user.models';
@@ -32,7 +32,7 @@ export class Init implements Action {
 
 export class InitAuthorized implements Action {
   readonly type = Types.INIT_AUTHORIZED;
-  constructor(public email: string, public user: UserResponse | null) {}
+  constructor(public username: string, public user: UserResponse | null) {}
 }
 
 export class InitUnauthorized implements Action {
@@ -48,7 +48,7 @@ export class InitError implements Action {
 //LOGIN
 export class SigninEmail implements Action {
   readonly type = Types.SIGNIN_IN_EMAIL;
-  constructor(public credentials: EmailPasswordCredentials) {}
+  constructor(public credentials: UsernamePasswordCredentials) {}
 }
 
 export class SigninEmailSuccess implements Action {

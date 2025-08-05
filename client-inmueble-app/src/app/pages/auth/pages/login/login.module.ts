@@ -9,6 +9,7 @@ import { FormsModule } from '@angular/forms';
 import { MatIconModule } from '@angular/material/icon';
 import { FlexLayoutModule } from '@angular/flex-layout';
 import { MatInputModule } from '@angular/material/input';
+import { IndicatorsModule, SpinnerModule } from '@app/shared/indicators';
 
 @NgModule({
   declarations: [LoginComponent],
@@ -22,6 +23,8 @@ import { MatInputModule } from '@angular/material/input';
     MatCardModule,
     FlexLayoutModule,
     MatInputModule,
+    IndicatorsModule,
+    SpinnerModule,
   ],
 })
 export class LoginModule {}
