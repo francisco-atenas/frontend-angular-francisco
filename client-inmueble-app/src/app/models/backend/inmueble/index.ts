@@ -1,7 +1,8 @@
 export interface Inmueble {
   id: number;
   nombre: string;
-  foto: string;
+  picture: string;
   precio: number;
-  fecha: string;
+  fechaCreacion: string;
+  direccion: string;
 }
